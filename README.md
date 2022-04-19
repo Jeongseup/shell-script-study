@@ -46,3 +46,13 @@ sample.sh 뒤에 인자를 붙여주면 `echo $1 $2 $3 ' > echo $1 ..'` 과 같�
     - '<' : des) is less than, in ASCII order / ex) [[ 비교연산 .. ]]
     - '>' : des) is greater than, in ASCII order
     - '-z' : des) string is null, that is, has zero length
+
+### Bash Manual
+```
+$ man bash
+
+       -e file
+              True if file exists.
+       -f file
+              True if file exists and is a regular file.
+```
