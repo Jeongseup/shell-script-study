@@ -56,3 +56,15 @@ $ man bash
        -f file
               True if file exists and is a regular file.
 ```
+- bash에서 할당하는 변수는 기본적으로 integer로 할당한다.
+
+### echo & printf
+`echo`로 프린팅하다가 중간에 `\n`와 같은 new line command를 주고 싶다면 `printf`를 사용한다.
+
+### Tips
+
+bc 실수 자동 처리 설정[https://stackoverflow.com/questions/27470210/bash-bc-modulo-does-not-work-with-l-flag]
+
+리눅스에는 archimetic expansion이 존재해서 이를 이용해서 variable을 increment, decrement하면 된다.
+
+출처 : https://askubuntu.com/questions/385528/how-to-increment-a-variable-in-bash
