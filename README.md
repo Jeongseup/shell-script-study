@@ -70,7 +70,7 @@ bc 실수 자동 처리 설정[https://stackoverflow.com/questions/27470210/bash
 출처 : https://askubuntu.com/questions/385528/how-to-increment-a-variable-in-bash
 
 case statement는 key-value mapping으로 처리하면 편할 듯
-```
+```shell
 case $vehicle in 
     # pattern1 )
     #     statements ;;
