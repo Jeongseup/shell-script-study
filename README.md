@@ -68,3 +68,25 @@ bc 실수 자동 처리 설정[https://stackoverflow.com/questions/27470210/bash
 리눅스에는 archimetic expansion이 존재해서 이를 이용해서 variable을 increment, decrement하면 된다.
 
 출처 : https://askubuntu.com/questions/385528/how-to-increment-a-variable-in-bash
+
+case statement는 key-value mapping으로 처리하면 편할 듯
+```
+case $vehicle in 
+    # pattern1 )
+    #     statements ;;
+
+    # pattern2 )
+    #     statements ;;
+    # ...
+
+    "car" ) 
+        echo "Rent of $vehicle 100 dollar" ;;
+
+    "van" ) 
+        echo "Rent of $vehicle 100 dollar" ;;
+
+    * )
+        echo "Unknown vehicle" ;;
+
+esac
+```
