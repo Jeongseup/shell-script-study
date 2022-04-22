@@ -6,6 +6,12 @@
 
 기본적으로 .sh파일을 생성한 후에 `chmod`커맨드로 실행가능하게 해줘야 permission error가 뜨지 않는다.
 
+`#!/bin/bash`의 의미
+```
+That is called a shebang, it tells the shell what program to interpret the script with, when executed.
+In your example, the script is to be interpreted and run by the bash shell.
+Some other example shebangs are:
+```
 ---
 
 ### 변수의 종류
