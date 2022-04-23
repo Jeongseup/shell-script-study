@@ -3,6 +3,7 @@
 function usage() {
     echo "you need to provide an argument : "
     echo "usage : $0 file_name"
+    exit
 }
 
 function if_file_exist()  {
@@ -10,8 +11,8 @@ function if_file_exist()  {
     [[ -f "$file" ]] && return 0 || return 1
 } 
 
-(( $# == 0 ))
-usage
+# if user don't any input? call usage function
+[[ $# == 0 ]] && usage
 
 if ( if_file_exist "$1" )
 then
