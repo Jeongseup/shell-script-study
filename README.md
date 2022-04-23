@@ -96,3 +96,5 @@ case $vehicle in
 
 esac
 ```
+
+select 를 쓰면 CLI 처럼 만들 수 있음.
