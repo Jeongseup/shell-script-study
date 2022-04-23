@@ -97,4 +97,39 @@ case $vehicle in
 esac
 ```
 
-select 를 쓰면 CLI 처럼 만들 수 있음.
+select 를 쓰면 CLI 처럼 만들 수 있음
+
+### 명령어 실행
+`;` : 성공여부와 상관없이 다음 명령어 실행
+
+```shell
+mkdir test;cd test # test란 폴더를 만들고 바로 cd
+```
+
+`&&`  : 성공한 경우에 다음 명령어 실행. then 같은 느낌
+
+```shell
+# before
+mkdir test; cd test; touch abc # 만약 mkdir test가 실패했다면 cd가 실패하고 touch abc는 현재 pwd에서 실행
+
+# after
+mkdir test && cd test && touch abc
+```
+
+`$?` : 명령어 반환값, 이전 명령의 성공 여부를 알려준다. 0 이 아니면 다 뭔가 잘못된 것을 의미
+
+```shell
+mkdir test
+echo $? # 0
+
+mkdir test # the file exists
+echo $? # 1
+```
+
+`&` : 명령어를 백그라운드로 동작시킬 때 사용
+
+
+`{}` : 명령어 그룹핑 시 사용, 같은 context를 공유
+```shell
+mkdir test3 && {cd test3; touch abc; echo 'success!!' } || echo 'There is no dir';
+```
